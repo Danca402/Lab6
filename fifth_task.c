@@ -14,7 +14,26 @@ Write a C program that reads the data (several hours-minutes-speed triplets, unt
 #include <stdio.h>
 
 int main(){
-
+  int h, m, s;
+  int fastest[24];
+  for(int i=0;i<24;i++)
+  fastest[i]=-1;
+  
+  
+  while(scanf("%d-%d-%d",&h,&m,&s)==3 && !(h==0&&m==0&&s==0)){
+    
+    if(fastest[h]<s){
+      fastest[h] = s;
+    }
+  }
+  
+  
+  
+  for(int i=0; i<24; i++){
+    if(fastest[i] != 0){
+      printf("%d:00-%d:59 -> %d km/h\n",i,i,fastest[i]);
+    }
+  }
 
   return 0;
 }
