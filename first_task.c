@@ -16,6 +16,6 @@ int main(void) {
     while (scanf("%c", &letter) == 1) {
         printf("letter='%c', letter=%d\n", letter, letter);
     }
-
+    // Ctrl + d  = exit
     return 0;
 }
