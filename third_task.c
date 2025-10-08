@@ -22,7 +22,22 @@ Marked: 25 69 54 8 77 6 29 10 3[MIN] 98
 #include <stdio.h>
 
 int main(){
-
+  int array[]={12,69,54,8,77,6,29,10,27,4};
+  int min=0;
+  for(int i=1; i<10; i++){
+    if(array[i]<array[min]){
+      min=i;
+    }
+  }
+  printf("The least: %d",array[min]);
+  printf("\nMarked: ");
+  for(int i=0; i<10; i++)
+  {
+    if(i == min){
+      printf("%d[MIN] ",array[i]);
+    }
+    else printf("%d ",array[i]);
+  }
 
   return 0;
 }
