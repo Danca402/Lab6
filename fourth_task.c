@@ -37,6 +37,20 @@ The only question is what shall we put into the last cell. Make a drawing and fi
 
 int main(){
 int array[10] = {25, 69, 54, 8, 77, 6, 29, 10, 3, 98};
+  for(int i=0; i<10; i++){
+    //printing
+    for(int j=0; j<10; j++){
+      printf("%d ",array[j]);
+    }
+    printf("\n");
+    //rotation
+    int rot = array[0];
+    for(int j=0; j<9; j++){
+      array[j]=array[j+1];
+    }
+    array[9]=rot;
+  }
+
 
   return 0;
 }
